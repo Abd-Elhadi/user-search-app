@@ -1,0 +1,252 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: aliceblue;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the body takes full height */
+    transition: background-color 1s ease;
+}
+
+.container {
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Start header */
+.header {
+    padding: 20px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    width: 60px;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.header .themes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.header .themes .mode {
+    margin-right: 15px;
+}
+
+.dark-mode .themes img.sun {
+    display: block;
+}
+
+.light-mode .themes img.moon {
+    display: block;
+}
+
+.dark-mode .themes img,
+.light-mode .themes img {
+    display: none;
+}
+
+.dark-mode {
+    background-color: rgb(26, 26, 40);
+}
+
+.dark-mode p {
+    color: white;
+}
+
+.light-mode {
+    background-color: #e6e3e3;
+    color: rgb(73, 72, 72);
+}
+
+.light-mode .logo {
+    color: black;
+}
+
+/* End Header */
+/* Start Search */
+
+.search {
+    background-color: rgb(36, 36, 55);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.light-mode .search,
+.light-mode .stats {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+    margin-right: 15px;
+}
+
+.search-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 10px 0;
+    font-size: 16px;
+    color: inherit;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+}
+
+.search-btn {
+    padding: 15px 20px;
+    background-color: rgb(67, 133, 220);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* End Search */
+/* Start User Box */
+.light-mode .user-box {
+    background-color: rgb(255, 255, 255);
+}
+.user-box {
+    margin-top: 25px;
+    background-color: rgb(36, 36, 55);
+    padding: 100px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.user-info {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.profile {
+    /* display: flex; */
+    align-items: center;
+}
+
+.avatar-section {
+    width: 20%;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-date-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name {
+    font-size: 30px;
+    margin: 0;
+}
+
+.dark-mode .username {
+    color: #0079ff;
+    margin: 5px 0;
+}
+
+.bio {
+    margin: 10px 0;
+}
+
+.joined-date {
+    color: #ffffff99;
+    font-size: 14px;
+}
+
+.light-mode .joined-date {
+    color: #141d2f;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    background-color: #141d2f;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 2cqmin;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item p {
+    margin: 10px;
+}
+
+.stat-value {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.additional-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.additional-info-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.info-item-box {
+    display: flex;
+}
+
+.info-item-box img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.additional-info p {
+    /* width: 48%; */
+    font-size: 14px;
+    margin: 0;
+}
+/* End User Box */
