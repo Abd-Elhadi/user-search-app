@@ -1,5 +1,12 @@
 document.body.classList.add("dark-mode");
 
+// how to the ability to search when the user press enter/return button
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+        document.querySelector('.search-btn').click();
+    }
+});
+
 document.getElementsByClassName("themes")[0].addEventListener('click', e => {
     if (document.body.classList.contains("light-mode")) {
         document.body.classList.replace("light-mode", "dark-mode");
@@ -69,8 +76,10 @@ function getUserInfo(username) {
         name.classList.add('name');
         name.textContent = data.name || "No Name";
 
-        const usernamePara = document.createElement('p');
+        const usernamePara = document.createElement('a');
         usernamePara.classList.add('username');
+        usernamePara.href = `https://github.com/${username}`;
+        usernamePara.target = "_blank";
         usernamePara.textContent = `@${data.login}`;
 
         const bio = document.createElement('p');

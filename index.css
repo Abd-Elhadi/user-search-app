@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-    padding: 0 15px;
+    padding: 0 50px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -25,7 +25,7 @@ body {
     padding: 20px;
 }
 
-.header .container {
+.header > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -128,6 +128,11 @@ body {
     border-radius: 10px;
     cursor: pointer;
 }
+
+.search-btn:hover {
+    background-color: rgb(35, 82, 144);
+    transition: background-color 0.3s ease;
+}
 /* End Search */
 /* Start User Box */
 .light-mode .user-box {
@@ -136,9 +141,22 @@ body {
 .user-box {
     margin-top: 25px;
     background-color: rgb(36, 36, 55);
-    padding: 100px;
+    padding: 50px;
     border-radius: 10px;
     display: flex;
+}
+
+/* make the user-box responsive */
+@media (max-width: 768px) {
+    .user-box {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-box {
+        padding: 20px;
+    }
 }
 
 .user-info {
@@ -158,10 +176,16 @@ body {
 }
 
 .avatar {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     margin-right: 20px;
+}
+
+@media (min-width: 768px) {
+    .user-info {
+        margin-left: 50px;
+    }
 }
 
 .user-details {
