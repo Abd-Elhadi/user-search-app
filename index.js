@@ -183,17 +183,20 @@ function createStatItem(label, value) {
 }
 
 function createInfoItem(content, type) {
-  const infoItemBox = document.createElement("div");
+    const infoItemBox = document.createElement("div");
     infoItemBox.classList.add("info-item-box");
 
-  const icon = document.createElement("img");
-  const iconInfo = getIconInfo(type);
+    const icon = document.createElement("img");
+    const iconInfo = getIconInfo(type);
 
-  icon.src = iconInfo.src;
-  icon.alt = iconInfo.alt;
+    icon.src = iconInfo.src;
+    icon.alt = iconInfo.alt;
 
-  const href = type === "location" || type === "company" ? null : type === "blog" ? content : `https://twitter.com/${content}`;
+    const href = type === "location" || type === "company" ? null : type === "blog" ? content : `https://twitter.com/${content}`;
     const infoItem = getInfoItemElement(type, content, href);
+    if (href) {
+        infoItem.classList.add("link");
+    }
     
     infoItemBox.addEventListener("click", (e) => {
         if (href) {
@@ -201,10 +204,10 @@ function createInfoItem(content, type) {
         }
     });
 
-  infoItemBox.appendChild(icon);
-  infoItemBox.appendChild(infoItem);
+    infoItemBox.appendChild(icon);
+    infoItemBox.appendChild(infoItem);
 
-  return infoItemBox;
+    return infoItemBox;
 }
 
 function getInfoItemElement(type, content, href = null) {

@@ -144,8 +144,7 @@ body {
     .name-date-box .joined-date {
         margin-top: 5px;
     }
-    .info-item-box a,
-    .info-item-box p {
+    .additional-info-box .link {
         display: none;
     }
 }
@@ -325,6 +324,7 @@ body {
 
 .info-item-box {
     display: flex;
+    align-items: center;
 }
 
 .info-item-box img {
