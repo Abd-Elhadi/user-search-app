@@ -144,9 +144,6 @@ body {
     .name-date-box .joined-date {
         margin-top: 5px;
     }
-    .additional-info-box .link {
-        display: none;
-    }
 }
 
 .search-bar {
@@ -320,6 +317,12 @@ body {
     display: flex;
     justify-content: space-between;
     margin: 10px;
+}
+
+@media (max-width: 768px) {
+    .additional-info-box .link {
+        display: none;
+    }
 }
 
 .info-item-box {
