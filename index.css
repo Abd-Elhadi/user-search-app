@@ -208,6 +208,15 @@ body {
     margin: 5px 0;
 }
 
+.username {
+    text-decoration: none;
+}
+
+.username:hover {
+    text-decoration: underline;
+    transition: text-decoration 0.3s ease;
+}
+
 .bio {
     margin: 10px 0;
 }
