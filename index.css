@@ -94,6 +94,62 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* responsive search on mobiles */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    .search {
+        margin-top: 20px;
+    }
+    .search-bar {
+        padding: 5px;
+    }
+    .search-btn {
+        padding: 10px 15px;
+    }
+    .search-input {
+        font-size: 14px;
+    }
+    .search-input::placeholder {
+        font-size: 12px;
+    }
+    .user-box {
+        padding: 20px;
+    }
+    .user-info {
+        margin-left: 0;
+    }
+    .user-details {
+        margin-top: 20px;
+    }
+    .stats {
+        margin-top: 10px;
+    }
+    .stat-item {
+        margin: 5px;
+    }
+    .additional-info-box {
+        margin: 5px;
+    }
+    .info-item-box img {
+        width: 15px;
+        height: 15px;
+    }
+    .info-item-box p {
+        font-size: 12px;
+    }
+    .name {
+        font-size: 20px;
+    }
+    .name-date-box {
+        flex-direction: column;
+    }
+    .name-date-box .joined-date {
+        margin-top: 5px;
+    }
+}
+
 .search-bar {
     display: flex;
     align-items: center;
