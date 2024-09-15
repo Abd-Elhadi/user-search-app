@@ -132,10 +132,6 @@ body {
     .additional-info-box {
         margin: 5px;
     }
-    .info-item-box img {
-        width: 15px;
-        height: 15px;
-    }
     .info-item-box p {
         font-size: 12px;
     }
@@ -147,6 +143,10 @@ body {
     }
     .name-date-box .joined-date {
         margin-top: 5px;
+    }
+    .info-item-box a,
+    .info-item-box p {
+        display: none;
     }
 }
 
@@ -331,6 +331,14 @@ body {
     width: 20px;
     height: 20px;
     margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .info-item-box img {
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+    }
 }
 
 .additional-info p {

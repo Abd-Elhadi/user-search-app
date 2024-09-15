@@ -20,7 +20,6 @@ document.getElementsByClassName("themes")[0].addEventListener("click", (e) => {
 document.querySelector(".search-btn").addEventListener("click", () => {
   const inputText = document.querySelector(".search-input").value;
   getUserInfo(inputText);
-  console.log(inputText);
 });
 
 const searchInput = document.querySelector(".search-input");
@@ -185,7 +184,7 @@ function createStatItem(label, value) {
 
 function createInfoItem(content, type) {
   const infoItemBox = document.createElement("div");
-  infoItemBox.classList.add("info-item-box");
+    infoItemBox.classList.add("info-item-box");
 
   const icon = document.createElement("img");
   const iconInfo = getIconInfo(type);
@@ -194,7 +193,13 @@ function createInfoItem(content, type) {
   icon.alt = iconInfo.alt;
 
   const href = type === "location" || type === "company" ? null : type === "blog" ? content : `https://twitter.com/${content}`;
-  const infoItem = getInfoItemElement(type, content, href);
+    const infoItem = getInfoItemElement(type, content, href);
+    
+    infoItemBox.addEventListener("click", (e) => {
+        if (href) {
+            window.open(href, '_blank');
+        }
+    });
 
   infoItemBox.appendChild(icon);
   infoItemBox.appendChild(infoItem);
