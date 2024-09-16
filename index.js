@@ -47,7 +47,8 @@ function getUserInfo(username) {
             return;
         }
         // Clear any existing user info
-        // document.getElementsByClassName("user-box")[0].innerHTML = "";
+            // document.getElementsByClassName("user-box")[0].innerHTML = "";
+        const container = document.getElementsByClassName("container")[0];
         const userInfoBox = document.createElement("div");
         userInfoBox.classList.add("user-box");
         // const userInfoBox = document.querySelector(".user-box");
@@ -170,7 +171,12 @@ function getUserInfo(username) {
         }
                     
         // Append the user info box to the body
-        document.body.appendChild(userInfoBox);
+        // clear any existing user info
+        if (container.getElementsByClassName("user-box").length > 0) {
+            container.getElementsByClassName("user-box")[0].remove();
+            }
+        // append the user info box to the container
+        container.appendChild(userInfoBox);
         // document.getElementById('user-info-container').appendChild(userInfoBox);
         })
         .catch((error) => console.error("Error:", error));
